@@ -1,0 +1,26 @@
+{
+    "MessageQueue": {
+        "ChainId": "AELF",
+        "Enable": true,
+        "StartPublishMessageHeight": 1,
+        "Period": 1000,
+        "BlockCountPerPeriod" : 500,
+        "ParallelCount": 500,
+        "ReservedCacheCount": 500,
+        "RetryTimes": 10,
+        "RetryInterval": 120000
+    },
+    "RabbitMQ": {
+        "HostName": "{{ .RabbitMqHost }}",
+        "Port": "{{ .RabbitMqPort }}",
+        "ClientName": "AElf",
+        "ExchangeName": "AeFinderExchange",
+        "UserName": "admin",
+        "Password": "admin",
+        "Uri": "amqp://{{ .RabbitMqHost }}:{{ .RabbitMqPort }}"
+    },
+    "Redis": {
+        "Configuration": "{{ .RedisHostPort }}"
+    },
+    "PluginSourcesFolder" : "{{ .PluginSourcesFolder }}"
+}

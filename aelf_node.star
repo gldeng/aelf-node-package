@@ -55,7 +55,10 @@ def run(
         public_ports["http"] = PortSpec(number=port_number)
 
     plan.add_service(SERVICE_NAME, ServiceConfig(
-        image=IMAGE_NAME,
+        image=ImageBuildSpec(
+            image_name="built-aelf-node",
+            build_context_dir="."
+        ),
         ports={
             "http": PortSpec(number=port_number),
             # "p2p": PortSpec(number=6801),

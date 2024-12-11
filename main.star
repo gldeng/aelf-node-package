@@ -1,5 +1,5 @@
 
-aelf_node_module = import_module("/aelf-node.star")
+aelf_node_module = import_module("/aelf_node.star")
 infra_module = import_module("github.com/gldeng/aelf-infra-package/main.star")
 
 def run(

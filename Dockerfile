@@ -7,5 +7,4 @@ RUN rm /app/appsettings.*
 COPY --from=father /app/W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1.json /root/.local/share/aelf/keys/W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1.json
 COPY --from=father /app/appsettings.json /app/
 COPY --from=father /app/appsettings.MainChain.MainNet.json /app/
-COPY --from=father /app/AElf.Blockchains* /app/
 COPY --from=father /app/AElf.Contracts.Genesis.dll /app/

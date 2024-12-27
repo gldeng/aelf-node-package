@@ -1,7 +1,7 @@
 FROM --platform=linux/amd64 gldeng/aelf-test-node:sha1514159 as father
 
 # Use the specified base image
-FROM --platform=linux/amd64 aelf/node:testnet2-1.12-net8-whitelist
+FROM --platform=linux/amd64 aelf/node:testnet-release-v1.12.3
 
 RUN rm /app/appsettings.*
 COPY --from=father /app/W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1.json /root/.local/share/aelf/keys/W1ptWN5n5mfdVvh3khTRm9KMJCAUdge9txNyVtyvZaYRYcqc1.json
